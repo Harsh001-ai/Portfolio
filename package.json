@@ -1,0 +1,8 @@
+{
+  "name": "harsh-portfolio",
+  "version": "2.0.0",
+  "description": "Harsh Kumar Jha — Creative Developer & UI/UX Designer Portfolio",
+  "scripts": {
+    "start": "node dev-server.js"
+  }
+}

@@ -70,7 +70,8 @@ A cinematic, interactive creative developer portfolio featuring dual HTML5 Canva
 
 2. **Start the local server**:
    ```bash
-   node server.js
+   node dev-server.js
+   # or: npm start
    ```
 
 3. **Open in browser**:
@@ -100,7 +101,9 @@ Portfolio/
 ├── frames_mid/                # 40 frames for mid-page portal sequence
 ├── contact.php                # PHP backend contact form handler
 ├── index.html                 # Semantic HTML5 entry document
-├── server.js                  # Lightweight local Node.js static server
+├── dev-server.js              # Lightweight local Node.js static server
+├── package.json               # Project manifest & start script
+├── vercel.json                # Vercel static deployment configuration
 ├── .gitignore                 # Ignored build & backup files
 └── README.md                  # Project documentation
 ```
