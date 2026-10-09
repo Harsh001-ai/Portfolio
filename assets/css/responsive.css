@@ -1,0 +1,1049 @@
+/**
+ * ==============================================================================
+ * COMPREHENSIVE RESPONSIVE DESIGN SYSTEM & BREAKPOINT SPECIFICATIONS
+ * ==============================================================================
+ * Master responsive controller with pixel-perfect calibration across:
+ * - 320px - 359px (Ultra-compact / iPhone SE 1st gen)
+ * - 360px - 374px (Compact Android / Galaxy)
+ * - 375px - 389px (Standard iPhone SE 2nd/3rd gen, iPhone 6/7/8)
+ * - 390px - 429px (iPhone 12/13/14/15/16)
+ * - 430px - 575px (iPhone Pro Max / Large Phablets)
+ * - 576px - 767px (Small Tablets / Large Mobiles)
+ * - 768px - 819px (Portrait Tablets: iPad Mini)
+ * - 820px - 991px (Portrait Tablets: iPad Air 10.9)
+ * - 992px - 1199px (Small Laptops / Landscape Tablets)
+ * - 1200px - 1439px (Standard Desktop / MacBook Pro 14)
+ * - 1440px - 1599px (QHD Desktop / MacBook Pro 16)
+ * - 1600px - 1919px (Large Displays / iMac 24)
+ * - 1920px+        (Full HD / Ultrawide / 4K Displays)
+ * - Landscape Mobile (< 520px viewport height)
+ * ==============================================================================
+ */
+
+/* ==============================================================================
+   GLOBAL RESPONSIVE GUARDS & TOUCH ACCESSIBILITY
+   ============================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+img,
+canvas,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Minimum 44px touch targets on interactive controls */
+button,
+a.btn,
+.mobile-toggle-btn,
+.sound-toggle-btn,
+.filter-btn,
+.jump-pill-btn,
+.faq-question-btn,
+.type-pill-btn,
+.modal-close-btn {
+  touch-action: manipulation;
+}
+
+/* Prevent iOS Safari auto-zoom on form inputs by ensuring >= 16px font-size */
+@media screen and (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* ==============================================================================
+   1. TABLET & BELOW (< 992px)
+   ============================================================================== */
+@media screen and (max-width: 991px) {
+  /* Site Header & Navigation */
+  .site-header {
+    padding: 1rem var(--container-padding);
+  }
+
+  .nav-links,
+  .nav-actions > .btn {
+    display: none !important;
+  }
+
+  .mobile-toggle-btn {
+    display: flex !important;
+  }
+
+  /* Hero Pinned Scrollytelling (< 992px) */
+  .hero-scroll-container {
+    height: 550vh;
+  }
+
+  .hero-ambient-glow {
+    max-width: 90vw !important;
+    max-height: 90vw !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .hero-story-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100%;
+    max-height: none;
+    padding: clamp(3.8rem, 8vh, 4.5rem) var(--container-padding) 1.25rem;
+    gap: 1.25rem;
+    align-content: center;
+  }
+
+  .hero-story-grid > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .story-canvas-stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: clamp(200px, 32vh, 300px);
+    max-height: 32vh;
+    border-radius: var(--radius-lg);
+  }
+
+  .story-narrative-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    max-height: none;
+    padding: 0;
+  }
+
+  .chapter-progress-strip {
+    margin-bottom: 0.85rem;
+  }
+
+  .chapter-title-wrap {
+    min-height: auto;
+    margin-bottom: 0.65rem;
+  }
+
+  .chapter-title {
+    font-size: clamp(1.25rem, 4vw, 1.65rem);
+    line-height: 1.15;
+  }
+
+  .chapter-description-wrap {
+    min-height: auto;
+    margin-bottom: 0.75rem;
+  }
+
+  .chapter-description {
+    font-size: clamp(0.82rem, 2.5vw, 0.92rem);
+    line-height: 1.5;
+  }
+
+  .chapter-telemetry-box {
+    margin-bottom: 0.85rem;
+    padding: 0.45rem 0.75rem;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .chapter-telemetry-code {
+    font-size: 0.68rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block !important;
+    max-width: 100% !important;
+  }
+
+  .chapter-jump-nav {
+    margin-bottom: 0.85rem;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-scroll-cue-wrap {
+    font-size: 0.75rem;
+  }
+
+  /* Mid-Portal Scrollytelling Gateway (< 992px) */
+  .mid-portal-scroll-container {
+    height: 450vh;
+  }
+
+  .mid-portal-stage-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100%;
+    padding: clamp(3.8rem, 8vh, 4.5rem) var(--container-padding) 1.25rem;
+    gap: 1.25rem;
+    align-content: center;
+  }
+
+  .mid-portal-stage-grid > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .portal-canvas-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: clamp(200px, 32vh, 300px);
+    max-height: 32vh;
+    border-radius: var(--radius-lg);
+  }
+
+  .portal-narrative-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .portal-progress-strip {
+    margin-bottom: 0.85rem;
+  }
+
+  .portal-headline {
+    font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+    line-height: 1.15;
+    margin-bottom: 0.65rem;
+  }
+
+  .portal-lead {
+    font-size: clamp(0.82rem, 2.5vw, 0.92rem);
+    line-height: 1.5;
+    margin-bottom: 0.85rem;
+  }
+
+  .portal-telemetry-box {
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.75rem;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .portal-telemetry-box code {
+    font-size: 0.68rem;
+    display: block !important;
+    max-width: 100% !important;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Section Grids (< 992px) */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-pillars-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .capability-row {
+    grid-template-columns: 60px 1fr;
+    gap: 1.5rem;
+  }
+
+  .capability-content {
+    grid-column: span 2;
+  }
+
+  .project-card.featured {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.standard {
+    grid-column: span 12;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-domains-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skills-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .availability-card {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ==============================================================================
+   2. MOBILE PHONES & SMALL TABLETS (< 768px)
+   ============================================================================== */
+@media screen and (max-width: 767px) {
+  /* Header: Hide desktop status pill on mobile to preserve clean action bar */
+  .site-header .status-pill {
+    display: none !important;
+  }
+
+  /* Hero & Portal scroll tracks tuned for smooth cinematic pace */
+  .hero-scroll-container {
+    height: 550vh;
+  }
+
+  .mid-portal-scroll-container {
+    height: 450vh;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    height: clamp(180px, 29vh, 250px);
+    max-height: 29vh;
+  }
+
+  /* Capabilities */
+  .capability-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .capability-content {
+    grid-column: span 1;
+  }
+
+  .capability-points {
+    grid-template-columns: 1fr;
+  }
+
+  /* Work / Projects */
+  .projects-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .projects-header-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+  }
+
+  .project-media-wrap {
+    min-height: 220px;
+  }
+
+  .project-preview-art {
+    min-height: 220px;
+    padding: 1.75rem;
+  }
+
+  .project-info-wrap {
+    padding: 1.5rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Case Study Modal Drawer */
+  .case-study-drawer {
+    max-width: 100%;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .case-study-title {
+    font-size: 1.75rem;
+  }
+
+  /* Timeline */
+  .timeline-entry {
+    padding-left: 36px;
+  }
+
+  .timeline-entry::before {
+    left: 8px;
+  }
+
+  .timeline-dot {
+    left: 2px;
+  }
+
+  .timeline-card {
+    padding: 1.5rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 1.75rem;
+  }
+
+  /* Process Steps */
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Highlights */
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Form */
+  .contact-form-panel {
+    padding: 1.75rem;
+  }
+
+  .form-row.two-col {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Footer */
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* ==============================================================================
+   3. PHABLETS & LARGE SMARTPHONES (430px - 575px)
+   ============================================================================== */
+@media screen and (min-width: 430px) and (max-width: 575px) {
+  .hero-story-grid,
+  .mid-portal-stage-grid {
+    padding: 4.2rem var(--container-padding) 1.25rem;
+    gap: 1rem;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    height: clamp(190px, 30vh, 260px);
+    max-height: 30vh;
+  }
+
+  .portal-headline {
+    font-size: 1.45rem;
+  }
+}
+
+/* ==============================================================================
+   4. STANDARD SMARTPHONES (375px - 429px: iPhone 12/13/14, iPhone SE 2/3)
+   ============================================================================== */
+@media screen and (min-width: 375px) and (max-width: 429px) {
+  .hero-story-grid,
+  .mid-portal-stage-grid {
+    padding: 3.8rem var(--container-padding) 1rem;
+    gap: 0.85rem;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    height: clamp(170px, 27vh, 230px);
+    max-height: 27vh;
+  }
+
+  .canvas-hud-badge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .chapter-title {
+    font-size: 1.25rem;
+  }
+
+  .chapter-description {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .portal-headline {
+    font-size: 1.35rem;
+  }
+
+  .portal-lead {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .btn {
+    padding: 0.75rem 1.35rem;
+  }
+}
+
+/* ==============================================================================
+   5. NARROW PHONES & ANDROID COMPACT (360px - 374px)
+   ============================================================================== */
+@media screen and (min-width: 360px) and (max-width: 374px) {
+  html {
+    font-size: 14.5px;
+  }
+
+  .site-header {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .brand-monogram span:last-child {
+    font-size: 0.95rem;
+  }
+
+  .hero-story-grid,
+  .mid-portal-stage-grid {
+    padding: 3.5rem 0.85rem 0.85rem;
+    gap: 0.75rem;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    height: clamp(160px, 25vh, 210px);
+    max-height: 25vh;
+  }
+
+  .chapter-title {
+    font-size: 1.18rem;
+  }
+
+  .chapter-description {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .portal-headline {
+    font-size: 1.28rem;
+  }
+
+  .portal-lead {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* ==============================================================================
+   6. ULTRA-COMPACT SMARTPHONES (320px - 359px: iPhone SE 1st gen)
+   ============================================================================== */
+@media screen and (max-width: 359px) {
+  html {
+    font-size: 13.5px;
+  }
+
+  /* Header Fit Guarantee */
+  .site-header {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .nav-container {
+    gap: 0.5rem;
+  }
+
+  .brand-monogram {
+    gap: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .monogram-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .sound-toggle-btn {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.65rem;
+    gap: 0.25rem;
+  }
+
+  .sound-toggle-btn span:last-child {
+    display: none; /* Icon-only audio state on ultra-narrow */
+  }
+
+  .mobile-toggle-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Hero & Portal Stages */
+  .hero-scroll-container {
+    height: 550vh;
+  }
+
+  .mid-portal-scroll-container {
+    height: 450vh;
+  }
+
+  .hero-story-grid,
+  .mid-portal-stage-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 3.25rem 0.65rem 0.65rem;
+    gap: 0.65rem;
+  }
+
+  .hero-story-grid > *,
+  .mid-portal-stage-grid > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    height: clamp(150px, 24vh, 190px);
+    max-height: 24vh;
+    border-radius: var(--radius-md);
+  }
+
+  .canvas-hud-badge {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .chapter-progress-strip,
+  .portal-progress-strip {
+    margin-bottom: 0.5rem;
+  }
+
+  .chapter-eyebrow,
+  .portal-eyebrow {
+    font-size: 0.68rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .chapter-title {
+    font-size: 1.1rem;
+    line-height: 1.15;
+  }
+
+  .chapter-description {
+    font-size: 0.75rem;
+    line-height: 1.38;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .chapter-telemetry-box,
+  .portal-telemetry-box {
+    padding: 0.35rem 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .chapter-telemetry-code,
+  .portal-telemetry-box code {
+    font-size: 0.62rem;
+  }
+
+  .chapter-jump-nav {
+    display: none; /* Hide jump pills on < 360px to preserve screen estate */
+  }
+
+  .portal-headline {
+    font-size: 1.18rem;
+    line-height: 1.15;
+  }
+
+  .portal-lead {
+    font-size: 0.75rem;
+    line-height: 1.38;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* General Cards & Elements on Ultra-Compact */
+  .capability-row,
+  .project-info-wrap,
+  .timeline-card,
+  .service-card,
+  .contact-form-panel {
+    padding: 1.15rem;
+  }
+
+  .btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.78rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==============================================================================
+   7. LANDSCAPE MOBILE PHONES (< 520px Viewport Height)
+   ============================================================================== */
+@media screen and (max-height: 520px) and (orientation: landscape) {
+  .hero-sticky-viewport,
+  .mid-portal-sticky-viewport {
+    height: 100vh;
+  }
+
+  .hero-story-grid,
+  .mid-portal-stage-grid {
+    grid-template-columns: 1.1fr 0.9fr !important;
+    padding: 2.75rem var(--container-padding) 0.5rem !important;
+    gap: 1.25rem !important;
+    align-items: center !important;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    height: 72vh !important;
+    max-height: 72vh !important;
+  }
+
+  .hero-ambient-glow {
+    max-width: 60vw !important;
+    max-height: 80vh !important;
+    left: 40% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .chapter-title-wrap {
+    min-height: auto !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .chapter-title,
+  .portal-headline {
+    font-size: 1.15rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .chapter-description-wrap {
+    min-height: auto !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .chapter-description,
+  .portal-lead {
+    font-size: 0.75rem !important;
+    line-height: 1.35 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .chapter-telemetry-box,
+  .portal-telemetry-box {
+    display: none !important;
+  }
+
+  .chapter-jump-nav {
+    display: none !important;
+  }
+
+  .hero-scroll-cue-wrap {
+    display: none !important;
+  }
+}
+
+/* ==============================================================================
+   8. PORTRAIT TABLETS (768px - 819px, 820px - 991px: iPad Mini & iPad Air)
+   ============================================================================== */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-story-grid,
+  .mid-portal-stage-grid {
+    padding: 5rem 2.5rem 2rem;
+    gap: 2rem;
+    max-width: 720px;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    height: clamp(260px, 36vh, 360px);
+    max-height: 36vh;
+  }
+
+  .chapter-title {
+    font-size: 1.75rem;
+  }
+
+  .portal-headline {
+    font-size: 1.85rem;
+  }
+
+  .project-preview-art {
+    min-height: 280px;
+  }
+}
+
+/* ==============================================================================
+   9. SMALL LAPTOPS & LANDSCAPE TABLETS (992px - 1199px)
+   ============================================================================== */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-story-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    padding: 4.5rem var(--container-padding) 2rem;
+  }
+
+  .mid-portal-stage-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.5rem;
+    padding: 4.5rem var(--container-padding) 2rem;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    max-height: 520px;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==============================================================================
+   10. STANDARD DESKTOPS (1200px - 1599px)
+   ============================================================================== */
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  .hero-story-grid {
+    grid-template-columns: 1.18fr 0.82fr;
+    gap: 3.5rem;
+  }
+
+  .mid-portal-stage-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3.5rem;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    max-height: 600px;
+  }
+}
+
+/* ==============================================================================
+   11. LARGE SCREENS & ULTRAWIDE (1600px - 1919px, 1920px+)
+   ============================================================================== */
+@media screen and (min-width: 1600px) {
+  .container,
+  .container-wide {
+    max-width: 1480px;
+  }
+
+  .hero-story-grid {
+    max-width: 1680px;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+  }
+
+  .mid-portal-stage-grid {
+    max-width: 1680px;
+    grid-template-columns: 1.22fr 0.78fr;
+    gap: 5rem;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    max-height: 660px;
+  }
+
+  .hero-ambient-glow {
+    width: 800px;
+    height: 800px;
+    filter: blur(110px);
+  }
+}
+
+/* ==============================================================================
+   12. ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   ============================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-container,
+  .mid-portal-scroll-container {
+    height: auto !important;
+  }
+
+  .hero-sticky-viewport,
+  .mid-portal-sticky-viewport {
+    position: relative !important;
+    height: auto !important;
+    padding: 6rem var(--container-padding) 4rem !important;
+  }
+
+  .story-canvas-stage,
+  .portal-canvas-frame {
+    max-height: 480px !important;
+  }
+
+  .chapter-title.switching,
+  .chapter-description.switching,
+  .portal-headline.switching,
+  .portal-lead.switching {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ==============================================================================
+   RESPONSIVE UPGRADES: AWARDS, CERTIFICATES & PERSONAL BRANDING
+   ============================================================================== */
+@media screen and (max-width: 860px) {
+  .achievement-spotlight-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .cert-preview-card {
+    grid-template-columns: 1fr;
+  }
+  .cert-thumb-wrap {
+    max-width: 320px;
+  }
+  .freelance-intro-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .achievement-meta-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .skills-domains-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .skills-domain-card {
+    padding: 1.5rem;
+  }
+  .skills-domain-title {
+    font-size: 1.2rem;
+  }
+  .skills-tag-pill {
+    font-size: 0.775rem;
+    padding: 0.38rem 0.7rem;
+    gap: 0.35rem;
+    max-width: 100%;
+  }
+  .skills-tag-pill .pill-badge {
+    font-size: 0.625rem;
+    padding: 0.1rem 0.4rem;
+  }
+  .skills-approach-card {
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .approach-quote {
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .approach-quote p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  .approach-pillar-item {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.7rem;
+  }
+  .tech-card {
+    padding: 1.35rem;
+  }
+  .skills-tech-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-device-frame.mobile-mockup {
+    width: 170px;
+  }
+  .freelance-projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .filter-btn {
+    padding: 0.42rem 0.95rem;
+    font-size: 0.75rem;
+    min-height: 34px;
+  }
+  .about-portrait-card {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}

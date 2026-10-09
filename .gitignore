@@ -1,0 +1,19 @@
+# Dependencies & Node
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Backups & temporary files
+frames_backup/
+*.tmp
+*.bak
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment files
+.env
+.env.local

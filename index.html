@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Harsh Kumar Jha — Web Designer, UI/UX Designer & Creative Frontend Developer. Responsive websites, modern Figma interfaces, and interactive web experiences.">
+  <meta name="theme-color" content="#06070A">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Harsh Kumar Jha — Web Designer & Creative Frontend Developer">
+  <meta property="og:description" content="Explore my portfolio featuring responsive web design, interactive 3D experiments, Figma prototypes, and internship experience at Travarsa Private Limited.">
+  <meta property="og:type" content="website">
+
+  <title>Harsh Kumar Jha — Web Designer & Creative Frontend Developer</title>
+
+  <!-- Typography: Syne (Display), Plus Jakarta Sans (Body), JetBrains Mono (Technical) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- GSAP & ScrollTrigger Animation Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#about" class="skip-link">Skip to main content</a>
+
+  <!-- Preloader Screen (Synchronized with 240 Frames) -->
+  <div class="hero-preloader" id="heroPreloader" role="status" aria-live="polite">
+    <div class="preloader-monogram">
+      HKJ<span>.</span>
+    </div>
+    <div class="preloader-spinner"></div>
+    <div class="preloader-text" id="preloaderText">Preloading Story Sequence // 0 / 240 (0%)</div>
+    <div class="preloader-bar-track">
+      <div class="preloader-bar-fill" id="preloaderFill"></div>
+    </div>
+  </div>
+
+  <!-- 
+    =============================================================================
+    MINIMAL PREMIUM NAVIGATION HEADER
+    =============================================================================
+  -->
+  <header class="site-header" role="banner">
+    <div class="nav-container">
+      <a href="#heroScrollContainer" class="brand-monogram" aria-label="Harsh Kumar Jha Homepage">
+        <span class="monogram-badge">HKJ</span>
+        <span>HARSH JHA</span>
+      </a>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#freelance" class="nav-link">Freelance</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="sound-toggle-btn" id="soundToggleBtn" aria-label="Toggle Sound Effects">
+          <span class="sound-wave-icon">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="sound-label">SOUND: OFF</span>
+        </button>
+
+        <a href="assets/docs/Harsh-Kumar-Jha-CV.pdf" download="Harsh-Kumar-Jha-CV.pdf" class="btn btn-secondary cv-download-btn" style="padding: 0.55rem 1rem; font-size: 0.775rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 0.35rem;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+
+        <a href="#contact" class="btn btn-primary" style="padding: 0.55rem 1.15rem; font-size: 0.8125rem;">
+          Let's Talk
+        </a>
+
+        <button type="button" class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Toggle navigation menu">
+          <span class="mobile-toggle-bar"></span>
+          <span class="mobile-toggle-bar"></span>
+          <span class="mobile-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+      <li><a href="#work" class="mobile-nav-link">Selected Work</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#freelance" class="mobile-nav-link">Freelance</a></li>
+      <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="assets/docs/Harsh-Kumar-Jha-CV.pdf" download="Harsh-Kumar-Jha-CV.pdf" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+        Download CV (PDF)
+      </a>
+      <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center;">
+        Start a Conversation
+      </a>
+      <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 0.5rem;">
+        jhah14687@gmail.com // Kolkata, India
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- 
+      =============================================================================
+      SECTION 1: HERO SCROLL STORY WITH SYNCHRONIZED NARRATIVE CHAPTERS
+      =============================================================================
+      550vh scroll-linked track featuring two-column storytelling:
+      - Left column: 240-frame Astro Bot cinematic launch rendered on HTML5 Canvas
+      - Right column: 5 structured narrative chapters transitioning in real-time
+    -->
+    <section class="hero-scroll-container" id="heroScrollContainer" aria-label="Hero Scroll Story">
+      <div class="hero-sticky-viewport">
+        <!-- Ambient lighting backdrop -->
+        <div class="hero-ambient-glow" aria-hidden="true"></div>
+
+        <div class="hero-story-grid">
+          
+          <!-- LEFT COLUMN: CANVAS VISUAL STAGE -->
+          <div class="story-canvas-stage">
+            <canvas id="heroSequenceCanvas" width="1920" height="1080"></canvas>
+
+            <!-- Technical Telemetry Badges -->
+            <span class="canvas-hud-badge canvas-hud-top-left">
+              <span class="hud-pulse-dot"></span>
+              HARSH KUMAR JHA // CREATIVE DEV
+            </span>
+            <span class="canvas-hud-badge canvas-hud-bottom-left" id="hudFrame">
+              FRAME: 001 / 240
+            </span>
+            <span class="canvas-hud-badge canvas-hud-bottom-right" id="hudScrub">
+              SCRUB: 0%
+            </span>
+          </div>
+
+          <!-- RIGHT COLUMN: SYNCHRONIZED NARRATIVE STORYTELLING PANEL -->
+          <div class="story-narrative-panel">
+            
+            <!-- Segmented Progress Indicator -->
+            <div class="chapter-progress-strip">
+              <span class="chapter-index-label" id="chapterIndexLabel">CHAPTER 01 / 05</span>
+              <div class="segmented-progress-bar" aria-label="Story chapter progress">
+                <div class="progress-segment"><div class="progress-segment-fill"></div></div>
+                <div class="progress-segment"><div class="progress-segment-fill"></div></div>
+                <div class="progress-segment"><div class="progress-segment-fill"></div></div>
+                <div class="progress-segment"><div class="progress-segment-fill"></div></div>
+                <div class="progress-segment"><div class="progress-segment-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- Chapter Eyebrow Tag -->
+            <div class="chapter-eyebrow">
+              <span class="chapter-eyebrow-dot"></span>
+              <span id="chapterEyebrowText">HARSH KUMAR JHA // INTRODUCTION</span>
+            </div>
+
+            <!-- Animated Chapter Title -->
+            <div class="chapter-title-wrap">
+              <h2 class="chapter-title" id="chapterTitle">CREATIVE WEB DESIGNER.<br>DIGITAL CRAFTSMAN.</h2>
+            </div>
+
+            <!-- Animated Chapter Description -->
+            <div class="chapter-description-wrap">
+              <p class="chapter-description" id="chapterDesc">
+                Welcome to my interactive workspace. Combining clean frontend implementation with thoughtful UI/UX principles, I build websites that look distinctive and work smoothly across all devices.
+              </p>
+            </div>
+
+            <!-- Live Telemetry Box -->
+            <div class="chapter-telemetry-box">
+              <code class="chapter-telemetry-code" id="chapterTelemetry">
+                STATUS: ONLINE // ROLE: FRONTEND &amp; UI/UX // PORTFOLIO: 2026
+              </code>
+            </div>
+
+            <!-- Interactive Chapter Jump Navigation Pills -->
+            <div class="chapter-jump-nav" id="chapterJumpNav" aria-label="Jump to story chapter">
+              <!-- Hydrated dynamically from site-data.js -->
+            </div>
+
+            <!-- Chapter Dynamic Action Wrap -->
+            <div class="chapter-action-wrap" id="chapterActionWrap">
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <a href="#work" class="btn btn-primary" style="padding: 0.65rem 1.25rem; font-size: 0.8125rem;">
+                  Explore My Work ↓
+                </a>
+                <a href="assets/docs/Harsh-Kumar-Jha-CV.pdf" download="Harsh-Kumar-Jha-CV.pdf" class="btn btn-secondary" style="padding: 0.65rem 1.15rem; font-size: 0.8125rem;">
+                  Download CV
+                </a>
+              </div>
+              <div class="hero-scroll-cue-wrap">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                </svg>
+                <span>Scroll down to advance story</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      =============================================================================
+      SECTION 2: INTRODUCTION / ABOUT ME
+      =============================================================================
+    -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-badge-header">
+          <span class="mono-label">02 // PERSONAL INTRODUCTION &amp; PHILOSOPHY</span>
+        </div>
+        <div class="about-grid">
+          <div>
+            <h2 class="about-headline">
+              Creating digital experiences that combine thoughtful design, smooth interactions, and functional development.
+            </h2>
+            <p class="about-lead">
+              I’m Harsh Kumar Jha, a web designer and developer passionate about creating digital experiences that combine thoughtful design, smooth interactions, and functional development. I enjoy transforming ideas into responsive websites, exploring modern UI/UX principles, and experimenting with interactive web technologies.
+            </p>
+            <div class="about-body">
+              <p>
+                Through hands-on projects and my web development internship at Travarsa Private Limited, I’ve been developing my skills in frontend development, interface design, and practical web implementation. I’m continuously learning, building, and refining my approach to creating digital products that look distinctive and work beautifully across devices.
+              </p>
+              <p>
+                I’m open to opportunities where I can contribute creatively, learn from experienced teams, and help businesses bring their ideas to life through the web.
+              </p>
+            </div>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="assets/docs/Harsh-Kumar-Jha-CV.pdf" download="Harsh-Kumar-Jha-CV.pdf" class="btn btn-primary">
+                Download CV (PDF)
+                <span class="btn-icon">↓</span>
+              </a>
+              <a href="#experience" class="btn btn-secondary">
+                View Internship &amp; Experience
+                <span class="btn-icon">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Editorial Portrait Column -->
+          <div class="about-profile-wrap">
+            <div class="about-portrait-card">
+              <div class="about-portrait-img-wrap">
+                <img src="assets/images/harsh-portrait.jpg" alt="Harsh Kumar Jha — Web Designer &amp; Frontend Developer" class="about-portrait-img">
+                <div class="about-portrait-overlay">
+                  <span class="about-portrait-badge">
+                    <span class="status-dot"></span>
+                    Available for Opportunities
+                  </span>
+                  <div class="about-portrait-name">Harsh Kumar Jha</div>
+                  <div class="about-portrait-meta">Web Designer &amp; Developer // Kolkata, India</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Engineering & Design Pillars Row -->
+        <div class="about-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number">01</div>
+            <h3 class="pillar-title">Thoughtful Design</h3>
+            <p class="pillar-desc">
+              Balancing visual hierarchy, modern typography, and clear user ergonomics to build interfaces that are both aesthetically pleasing and easy to navigate.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-number">02</div>
+            <h3 class="pillar-title">Responsive Code</h3>
+            <p class="pillar-desc">
+              Writing clean, semantic HTML5 and modern CSS with Flexbox and Grid to ensure pixel-precise layout consistency across mobile, tablet, and desktop viewports.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-number">03</div>
+            <h3 class="pillar-title">Interactive Implementation</h3>
+            <p class="pillar-desc">
+              Exploring contemporary JavaScript, Bootstrap, Canvas animations, and Spline 3D integrations to make web experiences engaging and memorable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 
+      =============================================================================
+      SECTION 3: PROFESSIONAL EXPERIENCE & INTERNSHIP
+      =============================================================================
+    -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-badge-header">
+          <span class="mono-label">03 // PROFESSIONAL EXPERIENCE</span>
+        </div>
+        <h2 class="section-editorial-title">
+          Web Development Internship &amp; Practical Engineering
+        </h2>
+        <p class="section-editorial-subtitle">
+          Hands-on web development experience translating visual concepts into functional, responsive web pages at Travarsa Private Limited.
+        </p>
+
+        <div class="experience-timeline" id="experienceTimeline">
+          <!-- Hydrated dynamically from site-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 
+      =============================================================================
+      SECTION 4: ACHIEVEMENTS & GOLD MEDAL RECOGNITION
+      =============================================================================
+    -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-badge-header">
+          <span class="mono-label">04 // AWARDS &amp; RECOGNITION</span>
+        </div>
+        <h2 class="section-editorial-title">
+          Honored with the Gold Medal of Excellence
+        </h2>
+        <p class="section-editorial-subtitle">
+          Acknowledged during the formal Rewards &amp; Recognition Program for technical commitment, problem-solving, and responsive web execution.
+        </p>
+
+        <div id="achievementsSpotlight">
+          <!-- Hydrated dynamically from site-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      =============================================================================
+      MID-PAGE CINEMATIC SCROLL STORY: "COME, LET'S SEE MORE"
+      =============================================================================
+      450vh pinned scrollytelling gateway bridging into Selected Work.
+      Features 40 Full HD frames from ./frames_mid/ depicting the developer workstation,
+      Astro Bot greeting, and warp transition into Selected Work.
+    -->
+    <section class="mid-portal-scroll-container" id="portalScrollContainer" aria-label="Gateway: Come Let's See More">
+      <div class="mid-portal-sticky-viewport">
+        <div class="mid-portal-stage-grid">
+          
+          <!-- Visual Frame: 1920x1080 Developer Display Canvas -->
+          <div class="portal-canvas-frame">
+            <canvas id="portalSequenceCanvas" width="1920" height="1080"></canvas>
+            
+            <span class="canvas-hud-badge canvas-hud-top-left">
+              <span class="hud-pulse-dot" style="background-color: #fbbf24; box-shadow: 0 0 8px #fbbf24;"></span>
+              GATEWAY_MONITOR // HARSH KUMAR JHA
+            </span>
+            <span class="canvas-hud-badge canvas-hud-bottom-left" id="portalHudFrame">
+              PORTAL: 01/40
+            </span>
+            <span class="canvas-hud-badge canvas-hud-bottom-right" id="portalHudScrub" style="color: #fbbf24;">
+              GATEWAY: 0%
+            </span>
+          </div>
+
+          <!-- Kinetic Narrative Card -->
+          <div class="portal-narrative-card">
+            <div class="portal-progress-strip">
+              <span class="portal-stage-label" id="portalStageEyebrow">01 // THE INVITATION</span>
+              <div class="portal-segmented-bar" aria-label="Gateway stage progress">
+                <div class="portal-segment"><div class="portal-segment-fill"></div></div>
+                <div class="portal-segment"><div class="portal-segment-fill"></div></div>
+                <div class="portal-segment"><div class="portal-segment-fill"></div></div>
+              </div>
+            </div>
+
+            <div class="portal-eyebrow">
+              <span class="chapter-eyebrow-dot" style="background-color: #fbbf24; box-shadow: 0 0 8px #fbbf24;"></span>
+              <span id="portalEyebrowSub">GATEWAY ILLUMINATION</span>
+            </div>
+
+            <h2 class="portal-headline" id="portalStageTitle">
+              COME, LET'S SEE MORE.
+            </h2>
+
+            <p class="portal-lead" id="portalStageLead">
+              The developer workstation ignites with kinetic golden ribbons, inviting you directly into my project archive.
+            </p>
+
+            <div class="portal-telemetry-box">
+              <code id="portalStageTelemetry">STATUS: GATEWAY_STANDBY // FLUX: NOMINAL // SIGNAL: READY</code>
+            </div>
+
+            <div>
+              <a href="#work" class="btn btn-primary" style="padding: 0.85rem 1.75rem;">
+                Explore Selected Projects
+                <span class="btn-icon">↓</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      =============================================================================
+      SECTION 5: SELECTED WORK / FEATURED PROJECTS
+      =============================================================================
+    -->
+    <section class="section projects-section" id="work">
+      <div class="container-wide">
+        <div class="projects-header-bar">
+          <div class="projects-header-content">
+            <div class="section-badge-header">
+              <span class="mono-label">05 // SELECTED WORK</span>
+            </div>
+            <h2 class="section-editorial-title">
+              Live Web Projects &amp; Interactive UI Prototypes
+            </h2>
+            <p class="section-editorial-subtitle">
+              A curated collection of verified web applications, e-commerce storefronts, 3D explorations, and interactive Figma prototypes.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="project-filters" role="tablist" aria-label="Filter projects by category">
+            <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+            <button type="button" class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Development</button>
+            <button type="button" class="filter-btn" data-filter="ui/ux" role="tab" aria-selected="false">UI/UX Design (Figma)</button>
+            <button type="button" class="filter-btn" data-filter="interactive" role="tab" aria-selected="false">Interactive Experiences</button>
+          </div>
+        </div>
+
+        <!-- Asymmetrical Project Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Hydrated dynamically from site-data.js -->
+        </div>
+
+        <!-- More Experiments Teaser -->
+        <div style="margin-top: 3.5rem; padding: 2rem; background: var(--bg-secondary); border: 1px dashed var(--border-subtle); border-radius: var(--radius-xl); text-align: center;">
+          <h3 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.5rem;">More Projects &amp; UI Experiments Coming Soon</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem;">
+            Continuously designing in Figma and implementing new frontend ideas. Check back regularly or reach out to see what’s currently in active development.
+          </p>
+          <a href="#contact" class="btn btn-secondary" style="font-size: 0.8125rem;">
+            Inquire About Ongoing Work →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 
+      =============================================================================
+      CASE STUDY DRAWER MODAL
+      =============================================================================
+    -->
+    <div class="case-study-modal" id="caseStudyModal" role="dialog" aria-modal="true" aria-label="Project Case Study">
+      <div class="case-study-drawer" id="caseStudyDrawer">
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close Case Study">
+          ✕
+        </button>
+        <div id="caseStudyBody">
+          <!-- Populated dynamically when clicking 'Project Overview' -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      =============================================================================
+      UNIVERSAL IMAGE LIGHTBOX (FOR CERTIFICATE & AWARD PHOTOGRAPH)
+      =============================================================================
+    -->
+    <div class="image-lightbox-modal" id="imageLightboxModal" role="dialog" aria-modal="true" aria-label="Enlarged Credential Photo">
+      <div class="lightbox-content-wrap">
+        <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close Lightbox">
+          ✕
+        </button>
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 
+      =============================================================================
+      SECTION 6: SKILLS / ANIMATED TECHNOLOGY STACK
+      =============================================================================
+    -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-badge-header">
+          <span class="mono-label">06 // TECHNICAL SKILLS &amp; PRACTICAL TOOLCHAIN</span>
+        </div>
+        <h2 class="section-editorial-title">
+          Technical Skills &amp; Practical Toolchain
+        </h2>
+        <p class="section-editorial-subtitle">
+          Authentic, demonstrated skills across core frontend languages, modern UI frameworks, interactive 3D, and Figma interface design.
+        </p>
+
+        <!-- 4 Competency Domains Grid (01 Frontend, 02 UI/UX, 03 Motion, 04 Tools) -->
+        <div class="skills-domains-grid" id="skillsDomainsGrid">
+          <!-- Hydrated dynamically from site-data.js -->
+        </div>
+
+        <!-- "My Approach" Editorial Philosophy & Focus Pillars Card -->
+        <div class="skills-approach-card" id="skillsApproachCard">
+          <!-- Hydrated dynamically from site-data.js -->
+        </div>
+
+        <!-- Verified Core Technologies Showcase Header & Grid -->
+        <div class="skills-tech-header">
+          <div class="skills-tech-badge-wrap">
+            <span class="mono-label">VERIFIED CORE STACK</span>
+          </div>
+          <h3 class="skills-tech-title">Production Technologies &amp; Frameworks</h3>
+          <p class="skills-tech-subtitle">
+            Interactive breakdown of the 8 core technologies powering client web applications, prototypes, and dynamic platforms.
+          </p>
+        </div>
+
+        <div class="skills-tech-grid" id="skillsTechGrid">
+          <!-- Hydrated dynamically from site-data.js with official SVG icons -->
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 
+      =============================================================================
+      SECTION 7: SERVICES / FREELANCE OFFERINGS
+      =============================================================================
+    -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-badge-header">
+          <span class="mono-label">07 // CLIENT SERVICES</span>
+        </div>
+        <h2 class="section-editorial-title">
+          Services &amp; Collaborative Capabilities
+        </h2>
+        <p class="section-editorial-subtitle">
+          Clear deliverables, outcome-oriented workflows, and dependable execution tailored for freelance projects and team collaborations.
+        </p>
+
+        <div class="services-grid" id="servicesGrid">
+          <!-- Hydrated dynamically from site-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 
+      =============================================================================
+      SECTION 8: FREELANCE WORK — CURRENTLY ACTIVE
+      =============================================================================
+    -->
+    <section class="section freelance-section" id="freelance">
+      <div class="container">
+        <div class="section-badge-header">
+          <span class="mono-label">08 // FREELANCE ENGAGEMENTS</span>
+        </div>
+        <h2 class="section-editorial-title">
+          Freelance Work &amp; Project Availability
+        </h2>
+
+        <div class="freelance-intro-card">
+          <p class="freelance-intro-text" id="freelanceIntroText">
+            Alongside my learning and development journey, I work on freelance web projects, helping bring website ideas to life through thoughtful design, responsive interfaces, and practical implementation.
+          </p>
+          <a href="#contact" class="btn btn-primary">
+            Discuss a Freelance Project
+            <span class="btn-icon">→</span>
+          </a>
+        </div>
+
+        <div class="freelance-projects-grid" id="freelanceProjectsGrid">
+          <!-- Hydrated dynamically from site-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 
+      =============================================================================
+      SECTION 9: CONTACT / GET IN TOUCH
+      =============================================================================
+    -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-layout-grid">
+          <div class="contact-info-column">
+            <div>
+              <div class="section-badge-header">
+                <span class="mono-label">09 // GET IN TOUCH</span>
+              </div>
+              <h2 class="contact-main-headline">
+                HAVE A PROJECT?<br>LET'S CONNECT.
+              </h2>
+              <p style="font-size: var(--text-md); color: var(--text-secondary); line-height: 1.65; max-width: 480px;">
+                Whether you need a responsive website, an interactive prototype in Figma, or a dedicated frontend developer for your team, I’m ready to collaborate.
+              </p>
+
+              <div class="contact-channels">
+                <!-- Direct Email Channel with Copy Interaction -->
+                <div class="contact-channel-row" style="justify-content: space-between;">
+                  <a href="mailto:jhah14687@gmail.com" style="display: flex; align-items: center; gap: 1rem;">
+                    <span style="font-size: 1.25rem;">✉</span>
+                    <div>
+                      <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">DIRECT EMAIL</div>
+                      <div style="font-weight: 600; color: #ffffff;">jhah14687@gmail.com</div>
+                    </div>
+                  </a>
+                  <button type="button" class="copy-email-btn copy-email-trigger" aria-label="Copy email address to clipboard">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+                <!-- Phone Contact Channel -->
+                <a href="tel:+916290177421" class="contact-channel-row">
+                  <span style="font-size: 1.25rem;">📞</span>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">PHONE / WHATSAPP</div>
+                    <div style="font-weight: 600; color: #ffffff;">+91 62901 77421</div>
+                  </div>
+                </a>
+
+                <!-- GitHub Channel -->
+                <a href="https://github.com/Harsh001-aimy" target="_blank" rel="noopener noreferrer" class="contact-channel-row">
+                  <span style="font-size: 1.25rem;">⌨</span>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">GITHUB PROFILE</div>
+                    <div style="font-weight: 600; color: #ffffff;">github.com/Harsh001-aimy ↗</div>
+                  </div>
+                </a>
+
+                <!-- LinkedIn Channel -->
+                <a href="https://www.linkedin.com/in/harsh-kumar-jha-0ab5a6318/" target="_blank" rel="noopener noreferrer" class="contact-channel-row">
+                  <span style="font-size: 1.25rem;">💼</span>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">LINKEDIN PROFILE</div>
+                    <div style="font-weight: 600; color: #ffffff;">linkedin.com/in/harsh-kumar-jha ↗</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);">
+              BASED IN KOLKATA, INDIA // OPEN TO REMOTE WORLDWIDE &amp; CLIENT ENQUIRIES.
+            </div>
+          </div>
+
+          <!-- Functional Contact Form -->
+          <div class="contact-form-card">
+            <form id="contactForm" method="POST" action="contact.php" novalidate>
+              <div style="display: none;">
+                <label for="website_hp">Leave this field blank</label>
+                <input type="text" name="website_hp" id="website_hp" tabindex="-1" autocomplete="off">
+              </div>
+
+              <input type="hidden" name="project_type" id="projectTypeInput" value="Web Design &amp; Development">
+
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name *</label>
+                <input class="form-input" type="text" id="contactName" name="name" placeholder="John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address *</label>
+                <input class="form-input" type="email" id="contactEmail" name="email" placeholder="john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Project Type</label>
+                <div class="project-type-selector">
+                  <button type="button" class="type-pill-btn selected" data-value="Web Design &amp; Development">Web Development</button>
+                  <button type="button" class="type-pill-btn" data-value="UI/UX Design in Figma">UI/UX (Figma)</button>
+                  <button type="button" class="type-pill-btn" data-value="Website Redesign">Website Redesign</button>
+                  <button type="button" class="type-pill-btn" data-value="Freelance Opportunity">Freelance Work</button>
+                  <button type="button" class="type-pill-btn" data-value="Job / Internship Opportunity">Job Opportunity</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactBudget">Budget Range (Optional)</label>
+                <select class="form-input" id="contactBudget" name="budget">
+                  <option value="Not Specified">Select an approximate range...</option>
+                  <option value="Flexible / Discussion">Flexible / Let's Discuss</option>
+                  <option value="< ₹15,000 / < $200">&lt; ₹15,000 / &lt; $200</option>
+                  <option value="₹15,000 - ₹40,000 / $200 - $500">₹15,000 — ₹40,000 / $200 — $500</option>
+                  <option value="₹40,000+ / $500+">₹40,000+ / $500+</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Project Details &amp; Scope *</label>
+                <textarea class="form-textarea" id="contactMessage" name="message" placeholder="Tell me about your project, idea, or role requirements..." required></textarea>
+              </div>
+
+              <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.65rem;">
+                <input type="checkbox" id="contactConsent" name="consent" style="margin-top: 0.3rem;" required>
+                <label for="contactConsent" style="font-size: var(--text-xs); color: var(--text-secondary); line-height: 1.4;">
+                  I consent to sharing these details with Harsh Kumar Jha for the purpose of receiving a project reply.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
+                Send Project Message
+                <span class="btn-icon">→</span>
+              </button>
+
+              <div class="form-status-feedback" id="formStatusFeedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 
+      =============================================================================
+      SECTION 10: FAQ ACCORDION
+      =============================================================================
+    -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-badge-header" style="justify-content: center;">
+          <span class="mono-label">10 // FREQUENTLY ASKED QUESTIONS</span>
+        </div>
+        <h2 class="section-editorial-title" style="text-align: center; margin: 0 auto 0.5rem;">
+          Common Questions &amp; Work Process
+        </h2>
+        <p class="section-editorial-subtitle" style="text-align: center; margin: 0 auto;">
+          Clear details regarding development workflows, project turnarounds, and availability.
+        </p>
+
+        <div class="faq-accordion-list" id="faqList">
+          <!-- Hydrated dynamically from site-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      =============================================================================
+      SECTION 11: FINAL CTA
+      =============================================================================
+    -->
+    <section class="final-cta-section">
+      <div class="cta-glow-backdrop"></div>
+      <div class="container">
+        <h2 class="final-cta-headline">
+          LET'S BUILD SOMETHING<br>DISTINCTIVE &amp; IMPACTFUL.
+        </h2>
+        <p class="final-cta-subhead">
+          Available for freelance commissions, frontend developer roles, and creative web projects.
+        </p>
+        <div class="final-cta-actions">
+          <a href="#contact" class="btn btn-primary" style="padding: 1.1rem 2.25rem;">
+            Start a Conversation
+            <span class="btn-icon">→</span>
+          </a>
+          <a href="assets/docs/Harsh-Kumar-Jha-CV.pdf" download="Harsh-Kumar-Jha-CV.pdf" class="btn btn-secondary" style="padding: 1.1rem 2rem;">
+            Download CV (PDF)
+          </a>
+          <button type="button" class="btn btn-secondary copy-email-trigger" style="padding: 1.1rem 2rem;">
+            Copy Direct Email
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 
+    =============================================================================
+    SECTION 12: PREMIUM FOOTER
+    =============================================================================
+  -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-wide">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand-name">HARSH KUMAR JHA</div>
+          <p class="footer-brand-role">
+            Web Designer, UI/UX Designer, and Frontend Developer based in Kolkata, India. Crafting distinctive digital experiences through clean code and modern interface design.
+          </p>
+          <div>
+            <div class="footer-clock-box" id="footerClock">
+              KOLKATA (IST): 00:00:00
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-nav-list">
+            <li><a href="#about" class="footer-nav-link">About</a></li>
+            <li><a href="#experience" class="footer-nav-link">Internship &amp; Experience</a></li>
+            <li><a href="#achievements" class="footer-nav-link">Achievements &amp; Gold Medal</a></li>
+            <li><a href="#work" class="footer-nav-link">Selected Work</a></li>
+            <li><a href="#skills" class="footer-nav-link">Skills Stack</a></li>
+            <li><a href="#services" class="footer-nav-link">Services</a></li>
+            <li><a href="#freelance" class="footer-nav-link">Freelance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-nav-list">
+            <li><a href="#services" class="footer-nav-link">Responsive Web Design</a></li>
+            <li><a href="#services" class="footer-nav-link">Frontend Development</a></li>
+            <li><a href="#services" class="footer-nav-link">UI/UX Design in Figma</a></li>
+            <li><a href="#services" class="footer-nav-link">Landing Page Design</a></li>
+            <li><a href="#services" class="footer-nav-link">Interactive Web Experiences</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Connect &amp; Social</div>
+          <ul class="footer-nav-list">
+            <li><a href="https://github.com/Harsh001-aimy" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/harsh-kumar-jha-0ab5a6318/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn ↗</a></li>
+            <li><a href="mailto:jhah14687@gmail.com" class="footer-nav-link">jhah14687@gmail.com</a></li>
+            <li><a href="tel:+916290177421" class="footer-nav-link">+91 62901 77421</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © <span id="copyrightYear">2026</span> HARSH KUMAR JHA. ALL RIGHTS RESERVED.
+        </div>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <span>CRAFTED WITH PRECISION &amp; CREATIVE INTENT</span>
+          <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page">
+            <span>BACK TO TOP</span>
+            <span>↑</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Copy Email Toast Notification -->
+  <div class="copy-toast" id="copyToast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts: Configuration, Audio Engine, Hero Story Engine, Mid Portal Engine, and UI Controller -->
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/sound-engine.js"></script>
+  <script src="assets/js/hero-sequence.js"></script>
+  <script src="assets/js/mid-sequence.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
