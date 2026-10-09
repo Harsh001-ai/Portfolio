@@ -1700,8 +1700,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.5rem;
-  background: linear-gradient(180deg, transparent 0%, rgba(6, 7, 10, 0.95) 100%);
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(6, 7, 10, 0.7) 25%, rgba(6, 7, 10, 0.96) 100%);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -1713,12 +1713,14 @@
   gap: 0.5rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
+  font-weight: 600;
   color: #38bdf8;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
   width: fit-content;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .about-portrait-name {
@@ -1729,7 +1731,7 @@
 
 .about-portrait-meta {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   font-family: var(--font-mono);
 }
 
