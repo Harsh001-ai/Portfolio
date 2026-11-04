@@ -7,8 +7,8 @@
  * - Hero Scroll Story Sequence (240 Frames) & Mid-Page Portal (40 Frames)
  * - About, Experience & Internship (Travarsa Private Limited), Certificate Lightbox
  * - Achievements & Gold Medal Ceremony Photograph
- * - Selected Projects (6 Live Web Apps + 4 Figma Interactive Prototypes + 1 In Progress)
- * - Animated Skills (HTML5, CSS3, JavaScript, PHP, Bootstrap, Three.js, React, Figma)
+ * - Selected Projects (Completed Client Systems + Live Web Apps + Figma Prototypes + In Progress)
+ * - Animated Skills (HTML5, CSS3, JavaScript, PHP, MySQL, Bootstrap, Three.js, React, Figma)
  * - 8 Tailored Freelance Services & Active Freelance Showcase
  * - Direct Working Contact Information & Copy-Email Feedback
  * ==============================================================================
@@ -20,8 +20,8 @@ window.PORTFOLIO_DATA = {
     name: "HARSH KUMAR JHA",
     shortName: "HARSH JHA",
     monogram: "HKJ",
-    role: "Web Designer, UI/UX Designer & Creative Frontend Developer",
-    tagline: "CRAFTING ENGAGING DIGITAL EXPERIENCES THROUGH THOUGHTFUL DESIGN & CLEAN IMPLEMENTATION",
+    role: "Full-Stack Web Developer | Frontend Engineer | UI/UX Designer | AI-Assisted Development",
+    tagline: "ENGINEERING ROBUST FULL-STACK WEB APPLICATIONS & ENGAGING DIGITAL EXPERIENCES THROUGH DATABASE ARCHITECTURE & THOUGHTFUL DESIGN",
     location: "Kolkata, West Bengal, India // Open to Remote Worldwide",
     timezone: "Asia/Kolkata", // Live footer clock (IST)
     email: "jhah14687@gmail.com",
@@ -51,9 +51,9 @@ window.PORTFOLIO_DATA = {
         number: "01",
         indexLabel: "CHAPTER 01 / 05",
         eyebrow: "HARSH KUMAR JHA // INTRODUCTION",
-        title: "CREATIVE WEB DESIGNER.\nDIGITAL CRAFTSMAN.",
-        description: "Welcome to my interactive workspace. Combining clean frontend implementation with thoughtful UI/UX principles, I build websites that look distinctive and work smoothly across all devices.",
-        annotation: "STATUS: ONLINE // ROLE: FRONTEND & UI/UX // PORTFOLIO: 2026",
+        title: "FULL-STACK WEB DEVELOPER.\nDIGITAL CRAFTSMAN.",
+        description: "Welcome to my interactive workspace. Combining full-stack PHP/MySQL development with clean frontend engineering, modern UI/UX principles, and AI-assisted workflows, I build scalable web applications and management systems that work smoothly across all devices.",
+        annotation: "STATUS: ONLINE // ROLE: FULL-STACK & UI/UX // PORTFOLIO: 2026",
         startFrame: 1,
         endFrame: 48,
         startProgress: 0.00,
@@ -92,10 +92,10 @@ window.PORTFOLIO_DATA = {
         id: "ch-04",
         number: "04",
         indexLabel: "CHAPTER 04 / 05",
-        eyebrow: "LIVE PROJECTS & PROTOTYPES",
-        title: "TEN REAL SHOWCASES.\nDEPLOYED & INTERACTIVE.",
-        description: "From full-scale e-commerce storefronts and 3D web experiments to mobile Figma prototypes, exploring the full spectrum of modern frontend technologies.",
-        annotation: "LIVE WEBSITES: 6 // FIGMA PROTOTYPES: 4 // TECH: JS, PHP, REACT, 3D",
+        eyebrow: "CLIENT SYSTEMS & PROTOTYPES",
+        title: "FLAGSHIP CLIENT SYSTEMS.\nDEPLOYED & PRODUCTION-TESTED.",
+        description: "From mission-critical aviation training management systems and enterprise employee platforms to full-scale e-commerce storefronts and interactive prototypes.",
+        annotation: "CLIENT SYSTEMS: 2 // WEB APPS: 6 // FIGMA: 4 // TECH: PHP, MYSQL, JS",
         startFrame: 145,
         endFrame: 192,
         startProgress: 0.60,
@@ -151,7 +151,7 @@ window.PORTFOLIO_DATA = {
         eyebrow: "COMPANION MANIFEST",
         headline: "THE WORK AWAITS.",
         leadText: "Astro Bot extends a welcoming gesture, guiding you beyond theory into real deployed websites, Figma UI systems, and interactive code.",
-        telemetry: "PORTAL: ENGAGED // PROJECTS: 10+ VERIFIED // CODE: TESTED",
+        telemetry: "PORTAL: ENGAGED // PROJECTS: 12+ VERIFIED // FULL-STACK & CLIENT SYSTEMS",
         startFrame: 13,
         endFrame: 26,
         startProgress: 0.28,
@@ -175,27 +175,27 @@ window.PORTFOLIO_DATA = {
   // About Section & Personal Narrative
   about: {
     transitionHeadline: "02 // PERSONAL INTRODUCTION & PHILOSOPHY",
-    editorialTitle: "Creating digital experiences that combine thoughtful design, smooth interactions, and functional development.",
-    leadParagraph: "I’m Harsh Kumar Jha, a web designer and developer passionate about creating digital experiences that combine thoughtful design, smooth interactions, and functional development. I enjoy transforming ideas into responsive websites, exploring modern UI/UX principles, and experimenting with interactive web technologies.",
+    editorialTitle: "Creating robust full-stack applications, database-driven systems, and thoughtful digital experiences.",
+    leadParagraph: "I’m Harsh Kumar Jha, a full-stack web developer, frontend engineer, and UI/UX designer passionate about building database-backed management systems, responsive web applications, and interactive digital experiences. I combine clean frontend engineering with robust PHP and MySQL backend development, modern UI/UX principles, and AI-assisted workflows.",
     paragraphs: [
-      "Through hands-on projects and my web development internship at Travarsa Private Limited, I’ve been developing my skills in frontend development, interface design, and practical web implementation. I’m continuously learning, building, and refining my approach to creating digital products that look distinctive and work beautifully across devices.",
-      "I’m open to opportunities where I can contribute creatively, learn from experienced teams, and help businesses bring their ideas to life through the web."
+      "With hands-on experience delivering completed client management platforms for the Indian Coast Guard's Dornier Training Flight and Prince Security Services, alongside my web development internship at Travarsa Private Limited, I specialize in architecting database-driven workflows, role-based access systems, and intuitive user ergonomics.",
+      "I leverage modern developer tooling, AI-assisted development (such as Antigravity and Codex), and rigorous debugging to take full-stack projects from concept and database schema through to production deployment and client delivery."
     ],
     pillars: [
       {
         number: "01",
-        title: "Thoughtful Design",
-        desc: "Balancing visual hierarchy, modern typography, and clear user ergonomics to build interfaces that are both aesthetically pleasing and easy to navigate."
+        title: "Full-Stack & Systems Architecture",
+        desc: "Architecting robust PHP backends and relational MySQL schemas with role-based access control (RBAC), data sanitization, and structured transactional workflows."
       },
       {
         number: "02",
-        title: "Responsive Code",
-        desc: "Writing clean, semantic HTML5 and modern CSS with Flexbox and Grid to ensure pixel-precise layout consistency across mobile, tablet, and desktop viewports."
+        title: "Frontend & UI/UX Precision",
+        desc: "Engineering responsive, accessible interfaces in HTML5, modern CSS, JavaScript, and Bootstrap, balancing visual hierarchy with intuitive user ergonomics."
       },
       {
         number: "03",
-        title: "Interactive Implementation",
-        desc: "Exploring contemporary JavaScript, Bootstrap, Canvas animations, and Spline 3D integrations to make web experiences engaging and memorable."
+        title: "AI-Assisted Workflow & Delivery",
+        desc: "Accelerating development, debugging, and testing using cutting-edge AI-assisted tools (Antigravity, Codex) for dependable, production-tested delivery."
       }
     ]
   },
@@ -261,6 +261,66 @@ window.PORTFOLIO_DATA = {
 
   // Featured Projects & Real Case Studies (with verified screenshots)
   projects: [
+    {
+      id: "icg-dornier-flight-management",
+      title: "Indian Coast Guard — Dornier Training Flight Management System",
+      category: "Full-Stack Web Application / Aviation Training Management",
+      categoryFilter: "client",
+      year: "2024",
+      status: "Completed",
+      role: "Full-Stack Web Developer",
+      featured: true,
+      tagline: "Mission-critical aviation training management platform digitizing sortie assessments, flight logs, and syllabus progression for the Dornier Training Flight.",
+      summary: "A comprehensive web-based aviation training management platform developed for the Indian Coast Guard's Dornier Training Flight. The system digitizes training records, sortie assessments, syllabus tracking, flight-hour documentation, and trainee management workflows.",
+      techStack: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3"],
+      liveUrl: "https://dorniertrainingflight.princesecurityservices.in/",
+      screenshot: "assets/images/projects/project-dornier.svg",
+      accentColor: "#38bdf8",
+      caseStudy: {
+        overview: "Developed as a flagship full-stack client project for the Indian Coast Guard's Dornier Training Flight, this platform digitizes and centralizes aviation training administration. It replaces manual paper-based sortie logging and syllabus evaluation sheets with an automated, secure, database-driven management platform.",
+        problem: "Aviation training conversion wings require rigorous accountability, detailed sortie grading across flight exercises, cumulative flight-hour tracking, and role-based validation. Manual logbooks and disparate spreadsheets created administrative friction, delayed progress reporting, and risked record fragmentation.",
+        goals: [
+          "Trainee and training coordinator dashboards with distinct role-based permissions.",
+          "Digital sortie reports and structured grading workflows across specific flight exercises.",
+          "Training syllabus and exercise progression tracking with milestone verification.",
+          "Flight-hour logging and automated cumulative training progress monitoring.",
+          "Structured digital records, report management, and historical audit workflows."
+        ],
+        solution: "Engineered a robust full-stack software architecture with modular PHP backend logic and a normalized MySQL relational database schema. Built role-based authentication, structured data validation, audit accountability, and an intuitive, responsive tactical interface with real-time flight calculations.",
+        challenges: "Architecting a granular exercise assessment data model capable of accommodating dynamic syllabus criteria, cumulative flight-hour aggregation, and strict data isolation across user tiers without external framework overhead.",
+        results: "Delivered a completed, production-ready aviation training management system that streamlines daily sortie evaluations, enforces accountability, and provides coordinators with instantaneous visibility into trainee progress."
+      }
+    },
+    {
+      id: "prince-security-employee-system",
+      title: "Prince Security Services — Employee Management System",
+      category: "Full-Stack Web Application / HR Management",
+      categoryFilter: "client",
+      year: "2024",
+      status: "Completed",
+      role: "Full-Stack Web Developer",
+      featured: true,
+      tagline: "Enterprise employee and operations management platform integrating corporate web presence with role-based staff records, attendance, and payroll workflows.",
+      summary: "A comprehensive employee management and administrative platform developed for a security services company, combining a professional corporate website with digital employee management workflows.",
+      techStack: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+      liveUrl: "https://princesecurityservices.in/",
+      screenshot: "assets/images/projects/project-prince-security.svg",
+      accentColor: "#10b981",
+      caseStudy: {
+        overview: "A comprehensive employee management and administrative platform developed for Prince Security Services. The system seamlessly combines a professional corporate public website with a secure, authenticated workforce management portal.",
+        problem: "Managing a distributed security workforce across multiple client sites with manual paper registers led to attendance tracking inaccuracies, delayed leave processing, cumbersome payroll documentation, and administrative bottlenecks.",
+        goals: [
+          "Admin, staff, and employee dashboards tailored to operational responsibilities.",
+          "Employee registration, digital profile management, and document storage.",
+          "Daily attendance management and duty assignment tracking.",
+          "Leave management workflows with multi-tier approval chains.",
+          "Salary and payroll-related record generation and administrative requests."
+        ],
+        solution: "Architected a dual-tier system clearly separating the public corporate marketing website from the authenticated employee management portal. Implemented a PHP/MySQL backend for transactional workforce data, Bootstrap 5 responsive UI components, role-based access control, and secure document handling.",
+        challenges: "Ensuring clean architectural separation between public corporate web pages and protected employee workflows, while maintaining rapid mobile responsiveness for on-site field supervisors across diverse devices.",
+        results: "Deployed a production-tested employee management platform that centralizes staff records, accelerates administrative request handling, and provides reliable payroll and attendance documentation."
+      }
+    },
     {
       id: "ecommerce-platform",
       title: "Fashion & Apparel E-commerce Website",
@@ -577,17 +637,17 @@ window.PORTFOLIO_DATA = {
   skillDomains: [
     {
       number: "01",
-      title: "Frontend Development",
-      summary: "Core markup, styling, scripting, and component architecture for responsive, cross-browser web interfaces.",
+      title: "Frontend & Full-Stack Development",
+      summary: "End-to-end web engineering, responsive user interfaces, PHP & MySQL backends, and relational database systems.",
       skills: [
+        { name: "PHP", badge: "Backend & Systems" },
+        { name: "MySQL", badge: "Database Architecture" },
+        { name: "JavaScript (ES6+)", badge: null },
         { name: "HTML5", badge: null },
         { name: "CSS3", badge: null },
-        { name: "JavaScript (ES6+)", badge: null },
-        { name: "Responsive Web Design", badge: null },
         { name: "Bootstrap", badge: null },
-        { name: "React.js", badge: "Fundamentals" },
-        { name: "PHP", badge: "Fundamentals" },
-        { name: "MySQL", badge: "Fundamentals" }
+        { name: "Responsive Web Design", badge: null },
+        { name: "React.js", badge: "Fundamentals" }
       ]
     },
     {
@@ -621,16 +681,16 @@ window.PORTFOLIO_DATA = {
     },
     {
       number: "04",
-      title: "Tools & Workflow",
-      summary: "Modern developer toolchain, responsive debugging, and AI-assisted engineering workflows.",
+      title: "Tools, Workflow & AI Development",
+      summary: "Modern developer toolchain, responsive debugging, integration testing, and AI-assisted engineering workflows.",
       skills: [
         { name: "Git & GitHub", badge: null },
         { name: "VS Code", badge: null },
         { name: "Chrome DevTools", badge: null },
-        { name: "Figma Prototyping", badge: null },
-        { name: "Responsive Testing", badge: null },
-        { name: "Browser Debugging", badge: null },
-        { name: "Antigravity AI Development Workflow", badge: null }
+        { name: "AI-Assisted Development (Antigravity, Codex)", badge: null },
+        { name: "Debugging & Browser Testing", badge: null },
+        { name: "Database & API Integration", badge: null },
+        { name: "Figma Prototyping", badge: null }
       ]
     }
   ],
@@ -638,13 +698,13 @@ window.PORTFOLIO_DATA = {
   // Design & Development Philosophy
   skillsApproach: {
     title: "My Approach",
-    statement: "I combine clean frontend development with thoughtful interface design to build responsive, visually engaging digital experiences. My focus is on layout precision, smooth interactions, performance, accessibility, and creating interfaces that work beautifully across desktop, tablet, and mobile devices.",
+    statement: "I combine full-stack PHP/MySQL architecture with clean frontend engineering and modern UI/UX principles to deliver dependable management systems and engaging digital experiences. My focus is on software architecture, database integrity, responsive layout precision, security, and delivering reliable client solutions using AI-assisted workflows.",
     pillars: [
-      { label: "Layout Precision" },
-      { label: "Smooth Interactions" },
-      { label: "Performance" },
-      { label: "Accessibility" },
-      { label: "Cross-Device Fidelity" }
+      { label: "Software Architecture" },
+      { label: "Database Integrity" },
+      { label: "Responsive Precision" },
+      { label: "Security & RBAC" },
+      { label: "AI-Assisted Delivery" }
     ]
   },
 
@@ -677,9 +737,9 @@ window.PORTFOLIO_DATA = {
     {
       id: "php",
       name: "PHP",
-      category: "Backend & Server",
-      focus: "Server Scripting & Form Handling",
-      description: "Implementing backend form processing, email transmission routing, CSRF token validation, input sanitization, and structured server-side logic for dynamic web pages.",
+      category: "Backend & Systems",
+      focus: "Full-Stack Architecture & MySQL Systems",
+      description: "Architecting backend application logic, relational MySQL database operations, role-based access control (RBAC), secure session handling, server-side data validation, and transactional workflows for completed client management systems.",
       iconSvg: `<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M256 512C114.6 512 0 397.4 0 256S114.6 0 256 0s256 114.6 256 256-114.6 256-256 256z" fill="#777BB4"/><path d="M142 342l20-106h43c24 0 38 10 34 32-4 22-22 32-46 32h-17l-8 42h-26zm33-64h14c11 0 19-4 21-14 2-10-3-14-14-14h-14l-7 28zm101 64l20-106h26l-7 37c7-8 17-13 28-13 20 0 31 11 26 36l-9 46h-26l8-43c2-12-3-17-13-17-9 0-17 6-21 17l-8 43h-26zm114 0l20-106h43c24 0 38 10 34 32-4 22-22 32-46 32h-17l-8 42h-26zm33-64h14c11 0 19-4 21-14 2-10-3-14-14-14h-14l-7 28z" fill="#fff"/></svg>`
     },
     {
@@ -827,27 +887,27 @@ window.PORTFOLIO_DATA = {
   // Freelance Work Section — Currently Active
   freelance: {
     status: "CURRENTLY ACCEPTING ENQUIRIES",
-    intro: "Alongside my learning and development journey, I work on freelance web projects, helping bring website ideas to life through thoughtful design, responsive interfaces, and practical implementation.",
+    intro: "Alongside my learning and development journey, I deliver full-stack client web systems and freelance projects, bringing ideas to life through robust PHP/MySQL architecture, responsive interfaces, and production-tested workflows.",
     projects: [
       {
         id: "fl-01",
-        title: "Bespoke Business Showcase Website",
-        clientType: "Commercial Client // Add Details",
+        title: "Indian Coast Guard — Aviation Flight Management System",
+        clientType: "Indian Coast Guard (Dornier Training Flight) // Completed Client Project",
         status: "Completed",
         statusColor: "#34d399",
-        description: "Designed and developed a responsive business showcase website focusing on clear service presentation, brand trust, and functional contact mechanisms.",
-        deliverables: ["Responsive UI Design", "Frontend Implementation", "Contact Integration"],
-        editableNote: "Client and project details can be updated here."
+        description: "Architected and delivered a web-based aviation training management platform digitizing sortie assessments, flight logs, syllabus progression, and role-based workflows.",
+        deliverables: ["Full-Stack Architecture", "PHP & MySQL Backend", "Sortie Evaluation Engine", "Trainee & Coordinator Dashboards"],
+        editableNote: "Production deployed client platform."
       },
       {
         id: "fl-02",
-        title: "Responsive Brand Landing Page",
-        clientType: "Creative Collaboration // In Progress",
-        status: "In Progress",
-        statusColor: "#38bdf8",
-        description: "Currently crafting a modern, responsive product landing page featuring interactive components, clean typography hierarchy, and conversion-oriented layouts.",
-        deliverables: ["Figma UI Exploration", "Mobile-First Frontend", "Interactive Motion"],
-        editableNote: "Currently in active development."
+        title: "Prince Security Services — Employee Management System",
+        clientType: "Prince Security Services // Completed Client Project",
+        status: "Completed",
+        statusColor: "#34d399",
+        description: "Engineered an enterprise platform combining a public-facing corporate website with an authenticated employee management portal for attendance, leave, and payroll.",
+        deliverables: ["Dual-Layer Architecture", "PHP / MySQL / Bootstrap", "Role-Based Access Control", "Workforce Administration"],
+        editableNote: "Production deployed client platform."
       }
     ]
   },
@@ -856,11 +916,11 @@ window.PORTFOLIO_DATA = {
   faqs: [
     {
       question: "What types of web projects do you work on?",
-      answer: "I specialize in responsive website design, frontend development (HTML, CSS, JavaScript, Bootstrap, React), UI/UX design in Figma, and interactive web experiences. I work on personal portfolios, business landing pages, e-commerce storefront concepts, and website redesigns."
+      answer: "I build full-stack web applications, database-backed management systems (PHP & MySQL), responsive business websites, UI/UX designs and prototypes in Figma, and interactive web experiences. My work ranges from enterprise client systems with role-based access control to modern e-commerce storefronts and interactive portals."
     },
     {
       question: "Are you available for freelance work and full-time opportunities?",
-      answer: "Yes! I am actively doing freelance web design and development projects, and I am also open to frontend developer roles, creative internships, and team opportunities where I can contribute and learn."
+      answer: "Yes! I am actively available for full-stack developer roles, frontend engineering positions, and client freelance engagements worldwide."
     },
     {
       question: "What is your typical turnaround time for a project?",

@@ -1,31 +1,35 @@
-# Harsh Kumar Jha — Creative Developer & UI/UX Designer Portfolio
+# Harsh Kumar Jha — Full-Stack Web Developer & UI/UX Designer Portfolio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-Harsh001--ai-181717?logo=github)](https://github.com/Harsh001-ai)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Harsh%20Kumar%20Jha-0A66C2?logo=linkedin)](https://www.linkedin.com/in/harsh-kumar-jha-0ab5a6318/)
 
-A cinematic, interactive creative developer portfolio featuring dual HTML5 Canvas scroll-linked image sequences, verified project showcases, interactive Figma prototypes, and an authentic technical toolchain.
+A cinematic, interactive portfolio featuring production-grade full-stack client management systems, dual HTML5 Canvas scroll-linked image sequences, verified project showcases, interactive Figma prototypes, and an authentic technical toolchain.
 
 ---
 
 ## 🌟 Key Features & Architectural Highlights
 
-### 1. Dual Canvas Scroll-Linked Animation Sequences
+### 1. Flagship Client Management Platforms
+* **Indian Coast Guard — Dornier Training Flight Management System**: Comprehensive web-based aviation training management platform digitizing training records, sortie assessments, syllabus tracking, flight-hour documentation, and trainee management workflows (PHP, MySQL, JavaScript, HTML5, CSS3).
+* **Prince Security Services — Employee Management System**: Enterprise employee management and administrative platform combining a corporate website with authenticated staff administration for profiles, attendance, leave, and payroll (PHP, MySQL, JavaScript, HTML5, CSS3, Bootstrap).
+
+### 2. Dual Canvas Scroll-Linked Animation Sequences
 * **Hero Sequence (240 Frames)**: Astro Bot cinematic takeoff sequence synchronized frame-by-frame to user scroll progress via native sticky viewport positioning, devicePixelRatio high-DPI scaling, and requestAnimationFrame throttling.
 * **Mid-Page Portal — *"Come, Let's See More"* (40 Frames)**: Seamless visual portal sequence connecting Selected Work to the Technical Skills ecosystem with stage-synchronized kinetic typography.
 * **Bidirectional Scroll Fidelity**: Flawless playback in both forward and backward scrolling with complete frame-loading state management.
 
-### 2. Comprehensive Work & Interactive Prototype Showcase
-* **Live Web Applications**: Full project case studies with dual device frames (MacBook + iPhone mockups), architecture notes, challenges, and verified live demo links.
+### 3. Comprehensive Work & Interactive Prototype Showcase
+* **Live Web Applications & Client Systems**: Full project case studies with dual device frames (MacBook + iPhone mockups), architecture notes, challenges, and verified live website links.
 * **Figma Interactive Prototypes**: High-fidelity clickable prototypes designed in Figma with Auto-Layout, Smart Animate, and component tokens.
-* **Multi-Category Filter System**: Category filtering (All, Web Apps, 3D, Figma, Client) with ARIA tab semantics and keyboard accessibility.
+* **Multi-Category Filter System**: Category filtering (All Projects, Client Systems, Web Applications, UI/UX Design, Interactive Experiences) with ARIA tab semantics and keyboard accessibility.
 
-### 3. Technical Skills & Practical Toolchain
-* **01 — Frontend Development**: HTML5, CSS3, JavaScript (ES6+), Responsive Web Design, Bootstrap, React.js (Fundamentals), PHP (Fundamentals), MySQL (Fundamentals).
+### 4. Technical Skills & Practical Toolchain
+* **01 — Frontend & Full-Stack Development**: PHP (Backend & Systems), MySQL (Database Architecture), JavaScript (ES6+), HTML5, CSS3, Bootstrap, Responsive Web Design, React.js (Fundamentals).
 * **02 — UI/UX & Interface Design**: Figma, Wireframing, High-Fidelity UI Design, Interactive Prototyping, Design Systems & Components, Responsive Interface Design, User Flow Design, Layout & Visual Hierarchy.
 * **03 — Motion & Interactive Experiences**: GSAP (Learning / Practical Exploration), Scroll-Driven Animations, Canvas-Based Image Sequences, CSS Transitions & Microinteractions, JavaScript Animation, Three.js (If used in actual projects), Interactive Landing Pages.
-* **04 — Tools & Workflow**: Git & GitHub, VS Code, Chrome DevTools, Figma Prototyping, Responsive Testing, Browser Debugging, Antigravity AI Development Workflow.
-* **Verified Tech Stack**: 8 interactive cards powered by official SVG iconography and detailed implementation notes.
+* **04 — Tools, Workflow & AI Development**: Git & GitHub, VS Code, Chrome DevTools, AI-Assisted Development (Antigravity, Codex), Debugging & Browser Testing, Database & API Integration, Figma Prototyping.
+* **Verified Tech Stack**: Interactive cards powered by official SVG iconography and detailed implementation notes.
 
 ### 4. Experience & Industry Recognition
 * **Internship at Travarsa Private Limited**: Full-Stack Web Development intern working on live business platforms and responsive client portals.
@@ -112,7 +116,7 @@ Portfolio/
 
 ## 📬 Contact & Connect
 
-* **Harsh Kumar Jha** — Web Designer, UI/UX Designer & Creative Frontend Developer
+* **Harsh Kumar Jha** — Full-Stack Web Developer, Frontend Engineer & UI/UX Designer
 * **Email**: [jhah14687@gmail.com](mailto:jhah14687@gmail.com)
 * **Phone**: [+91 62901 77421](tel:+916290177421)
 * **LinkedIn**: [linkedin.com/in/harsh-kumar-jha-0ab5a6318](https://www.linkedin.com/in/harsh-kumar-jha-0ab5a6318/)

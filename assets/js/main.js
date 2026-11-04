@@ -110,7 +110,7 @@
 
   /* 
    * ==============================================================================
-   * 2. RENDER WORK & PROJECTS (6 LIVE + 4 FIGMA + 1 IN PROGRESS)
+   * 2. RENDER WORK & PROJECTS (CLIENT SYSTEMS + LIVE WEB + FIGMA + IN PROGRESS)
    * ==============================================================================
    */
   let currentProjectFilter = 'all';
@@ -121,20 +121,30 @@
 
     const filtered = currentProjectFilter === 'all'
       ? data.projects
-      : data.projects.filter(p => p.categoryFilter === currentProjectFilter || p.category.toLowerCase().includes(currentProjectFilter.toLowerCase()));
+      : data.projects.filter(p => {
+          if (currentProjectFilter === 'client') {
+            return p.categoryFilter === 'client' || p.category.toLowerCase().includes('client');
+          }
+          if (currentProjectFilter === 'web') {
+            return p.categoryFilter === 'web' || p.categoryFilter === 'client' || p.category.toLowerCase().includes('web');
+          }
+          return p.categoryFilter === currentProjectFilter || p.category.toLowerCase().includes(currentProjectFilter.toLowerCase());
+        });
 
     grid.innerHTML = filtered.map((proj) => {
       const isFigma = proj.category.includes('Figma');
       const isInProgress = proj.status === 'In Progress';
       const techTags = proj.techStack.map(t => `<span class="tech-tag">${t}</span>`).join('');
 
-      const liveBtnLabel = isFigma ? 'Open Figma Prototype ↗' : (isInProgress ? 'Interactive Lab' : 'View Live Project ↗');
+      const liveBtnLabel = isFigma ? 'Open Figma Prototype ↗' : (isInProgress ? 'Interactive Lab' : 'View Live Website ↗');
       const liveBtnTarget = isInProgress ? '' : 'target="_blank" rel="noopener noreferrer"';
       const liveBadge = isFigma 
         ? '<span class="status-pill" style="font-size: 0.68rem; padding: 0.2rem 0.5rem; background: rgba(244, 63, 94, 0.1); border-color: rgba(244, 63, 94, 0.3); color: #f43f5e;"><span class="status-dot" style="background:#f43f5e;"></span>Figma Prototype</span>'
         : (isInProgress 
           ? '<span class="status-pill" style="font-size: 0.68rem; padding: 0.2rem 0.5rem; background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8;"><span class="status-dot" style="background:#38bdf8;"></span>In Progress</span>'
-          : '<span class="status-pill" style="font-size: 0.68rem; padding: 0.2rem 0.5rem; background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #34d399;"><span class="status-dot" style="background:#34d399;"></span>Live Website</span>');
+          : (proj.categoryFilter === 'client'
+            ? '<span class="status-pill" style="font-size: 0.68rem; padding: 0.2rem 0.5rem; background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8;"><span class="status-dot" style="background:#38bdf8;"></span>Completed Client Project</span>'
+            : '<span class="status-pill" style="font-size: 0.68rem; padding: 0.2rem 0.5rem; background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #34d399;"><span class="status-dot" style="background:#34d399;"></span>Live Website</span>'));
 
       let displayHostname = 'project-preview.live';
       try {
@@ -294,7 +304,7 @@
     if (!bodyContent) return;
 
     const isFigma = project.category.includes('Figma');
-    const liveLinkText = isFigma ? 'Open Interactive Figma Prototype ↗' : 'View Live Deployed Project ↗';
+    const liveLinkText = isFigma ? 'Open Interactive Figma Prototype ↗' : 'View Live Website ↗';
 
     bodyContent.innerHTML = `
       <span class="case-study-badge" style="color: ${project.accentColor}">${project.category} // ${project.year}</span>
