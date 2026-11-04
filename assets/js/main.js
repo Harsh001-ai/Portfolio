@@ -469,6 +469,7 @@
               ${techTags}
             </div>
 
+            ${exp.certificateImage ? `
             <!-- Internship Certificate Presentation Card -->
             <div class="experience-cert-wrap">
               <div class="cert-preview-card" id="openCertBtn" role="button" tabindex="0" aria-label="View Travarsa Certificate of Internship in full resolution">
@@ -493,6 +494,7 @@
                 </div>
               </div>
             </div>
+            ` : ''}
 
           </div>
         </div>

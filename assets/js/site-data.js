@@ -178,7 +178,7 @@ window.PORTFOLIO_DATA = {
     editorialTitle: "Creating robust full-stack applications, database-driven systems, and thoughtful digital experiences.",
     leadParagraph: "I’m Harsh Kumar Jha, a full-stack web developer, frontend engineer, and UI/UX designer passionate about building database-backed management systems, responsive web applications, and interactive digital experiences. I combine clean frontend engineering with robust PHP and MySQL backend development, modern UI/UX principles, and AI-assisted workflows.",
     paragraphs: [
-      "With hands-on experience delivering completed client management platforms for the Indian Coast Guard's Dornier Training Flight and Prince Security Services, alongside my web development internship at Travarsa Private Limited, I specialize in architecting database-driven workflows, role-based access systems, and intuitive user ergonomics.",
+      "With hands-on industry experience including six months at Digital Edge Solutions, a one-year web development internship at Travarsa Private Limited, and completing client management platforms for the Indian Coast Guard's Dornier Training Flight and Prince Security Services, I specialize in architecting database-driven workflows, role-based access systems, and intuitive user ergonomics.",
       "I leverage modern developer tooling, AI-assisted development (such as Antigravity and Codex), and rigorous debugging to take full-stack projects from concept and database schema through to production deployment and client delivery."
     ],
     pillars: [
@@ -202,6 +202,22 @@ window.PORTFOLIO_DATA = {
 
   // Professional Experience Timeline & Internship
   experience: [
+    {
+      period: "6 Months Experience",
+      current: false,
+      role: "Web Designer & Developer",
+      organization: "Digital Edge Solutions",
+      location: "Kolkata, West Bengal, India",
+      certificateId: null,
+      certificateImage: null,
+      description: "Developed responsive frontend components and PHP/API-connected features for client websites and business web applications. Implemented client feedback, improved usability, and supported cross-device functionality.",
+      highlights: [
+        "Developed responsive frontend components and PHP/API-connected features for websites and web applications.",
+        "Implemented client feedback, improved usability and supported cross-device functionality.",
+        "Delivered responsive web interfaces, form handling, and API integrations."
+      ],
+      technologies: ["PHP", "JavaScript", "HTML5", "CSS3", "REST APIs", "Responsive Design"]
+    },
     {
       period: "1 Year Internship",
       current: false,

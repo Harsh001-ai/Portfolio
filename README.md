@@ -32,7 +32,8 @@ A cinematic, interactive portfolio featuring production-grade full-stack client 
 * **Verified Tech Stack**: Interactive cards powered by official SVG iconography and detailed implementation notes.
 
 ### 4. Experience & Industry Recognition
-* **Internship at Travarsa Private Limited**: Full-Stack Web Development intern working on live business platforms and responsive client portals.
+* **Digital Edge Solutions (6 Months)**: Web Designer & Developer building responsive frontend components and PHP/API-connected features for client websites and business applications.
+* **Internship at Travarsa Private Limited (1 Year)**: Web Development Intern translating designs into working responsive interfaces and full e-commerce platforms.
 * **Gold Medal & Certificate of Excellence**: Awarded during the company Rewards & Recognition Program ceremony. Built-in modal lightbox for high-resolution credential viewing.
 
 ### 5. Responsive Engineering & Zero Overflow
